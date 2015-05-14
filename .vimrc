@@ -6,15 +6,32 @@ call vundle#rc()
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-"
+" Hier teste ich das 
 "PluginInstall
 "
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
 Plugin '907th/vim-auto-save'
 "let g:auto_save = 1  " enable AutoSave on Vim startup
-
+"Plugin 'marcweber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
 Plugin 'yegappan/mru'
+"Plugin 'garbas/vim-snipmate'
+"Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+
+
+Plugin 'honza/vim-snippets'
+
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"let g:snips_trigger_key = '<tab>'
+"let g:snips_trigger_key_backwards = '<s-tab>'
+
+
 "Plugin 'sjl/gundo.vim'
 "nnoremap <F5> :GundoToggle<CR>
 
@@ -38,25 +55,31 @@ if has('persistent_undo')
     augroup END
 endif
 
-Plugin 'chrisbra/csv.vim'
+"Plugin 'chrisbra/csv.vim'
 
 
 "Zeigt an Klammern
 set matchpairs=(:),{:},[:],<:>
 
 "set wundo
-"set undofile
+set undofile
 
 " We could also add repositories with a ".git" extension
 Plugin 'scrooloose/nerdtree.git'
 map <C-n> :NERDTreeToggle<CR>
 
 
+"Plugin 'mattn/emmet-vim' 
+
+"Plugin 'tpope/vim-surround'
+Bundle 'tpope/vim-surround'
+
+"verbose vmap S
 
 
 " To get plugins from Vim Scripts, you can reference the plugin
-" by name as it appears on the site
-Plugin 'Buffergator'
+	" by name as it appears on the site
+	"Plugin 'Buffergator'
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
@@ -64,7 +87,7 @@ filetype plugin indent on
 
 set laststatus=2
 
-set clipboard=unnamed
+""set clipboard=unnamed
 " copy and paste
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -95,8 +118,18 @@ endif
 
 
 " aktuelle Zeile und Spalte anzeigen
-"set ruler
+set ruler
 "set scrolloff=2
 
+"set nu
+"vmap <C-c> "+y
+"nmap <C-v> "+p
+set noswapfile
+
+Bundle 'farseer90718/vim-taskwarrior'
+"BundleInstall
+"
+"imap <c-d> dd
+imap <c-d> <esc>dd
 
 
